@@ -1,0 +1,265 @@
+* {
+    font-family: 'Aboreto', cursive;
+    font-family: 'Alkatra', cursive;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Source Code Pro', monospace;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: aqua;
+}
+
+.logo{
+    max-height: 150px;
+}
+
+#header{
+    height: 200px;
+    padding: 20px;
+}
+
+#header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu .menu-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+.menu-list .menu-link{
+    text-decoration: none;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #555555;
+    display: inline-block;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.menu-list .menu-link:hover{
+    color: #ffa500;
+}
+
+.menu-link::after{
+    content: "";
+    height: 2px;
+    background-color: #ffa500;
+    display: block;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+.menu-link::before{
+    content: "";
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    height: 2px;
+    background-color: #ffa500;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.menu-link:hover::after{
+    width: 60%;
+    opacity: 1;
+}
+.menu-link:hover::before{
+    width: 40%;
+    opacity: 1;
+}
+
+.social-network .social-link i{
+    font-size: 20px;
+    font-weight: 700;
+    color: #555555;
+    transition: all 0.3s ease;
+    padding: 20px;
+}
+
+.social-link i:hover{
+    background-color: #ffa500;
+    color: #fff;
+    border-radius: 50px;
+}
+
+.slider-container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.slider{
+    width: 60%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.slides{
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide{
+    flex: 0 0 100%;
+    position: relative;
+    height: 60vh;
+}
+
+.slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.slide-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #555555;
+}
+
+.slide-content h3{
+    font-size: 24px;
+}
+
+.slide-content p{
+    font-size: 16px;
+}
+
+.my-button{
+    position: relative;
+    color: #fff;
+    padding: 20px 30px;
+    border: 2px solid;
+    border-radius: 10em;
+    background-color: rgba(34, 45, 79, 0.5);
+    border-color: rgba(255, 255, 255, 0.6);
+    transition: 250ms all ease-in-out;
+}
+
+.my-button:hover{
+    background-color: #4ac4cf;
+    border-color: #4ac4cf;
+}
+
+.my-button::after{
+    content: '';
+    display: block;
+    position: absolute;
+    background-color: #4ac4cf;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10em;
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.my-button:hover::after{
+    opacity: 0.49;
+    top: -17px;
+    left: -17px;
+    right: -17px;
+    bottom: -17px;
+}
+
+.my-button::before{
+    content: '';
+    display: block;
+    position: absolute;
+    background-color: #4ac4cf;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10em;
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.my-button:hover::before{
+    opacity: .64;
+    top: -9px;
+    left: -9px;
+    right: -9px;
+    bottom: -9px;
+}
+
+.dots-container{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.swiper-pagination-dots{
+    margin: 30px 0 8px;
+    width: 1px;
+    height: 176px;
+    background-color: #e1e1e1;
+}
+
+.dots-numbers-container{
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 500;
+    color: #555555;
+    margin-bottom: 20px;
+    transform: rotate(-90deg);
+}
+.dots-numbers-container-index{
+    color: #ffa500;
+}
+
+.dot{
+    position: relative;
+    width: 40px;
+    height: 5px;
+    margin-top: 20px;
+    background-color: #000;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.dot::before{
+    content: "";
+    position: absolute;
+    background-color: #6689ff;
+    width: 40px;
+    height: 5px;
+    right: 100%;
+    transition: all 0.3s ease;
+}
+
+.dot:hover::before{
+    right: 0;
+}
+
+.active::before{
+    content: "";
+    background-color: #ffa500;
+    right: 0;
+    transition: all 0.3s ease;
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aboreto&family=Alkatra:wght@500&family=Roboto:wght@100;400&family=Source+Code+Pro&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="logo-img">
+                <img src="img/logo/png/logo-no-background.png" alt="" class="logo">
+            </div>
+            <nav class="menu">
+                <ul class="menu-list">
+                    <li><a href="#" class="menu-link">Home</a></li>
+                    <li><a href="#" class="menu-link">About</a></li>
+                    <li><a href="#" class="menu-link">Games</a></li>
+                    <li><a href="#" class="menu-link">Contacts</a></li>
+                    <li><a href="#" class="menu-link">Teams</a></li>
+                </ul>
+            </nav>
+            <div class="social-network">
+                <a href="#" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="social-link"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="slider-container" style="background-color: rgb(229, 255, 0);">
+        <div class="slider">
+            <div class="slides">
+                <div class="slide">
+                    <img src="img/bicycle.png" alt="slide-1">
+                    <div class="slide-content">
+                        <h3>Bicycle</h3>
+                        <p>Team work makes dream work when it comes to Tandem Bikes.</p>
+                        <a href="#">
+                            <button class="my-button">Tandem</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="img/folding.jpg" alt="slide-2">
+                    <div class="slide-content">
+                        <h3>Bicycle</h3>
+                        <p>Folding Bikes are perfect for riders with limited space but are
+                            after an exciting ride around town.
+                        </p>
+                        <a href="#">
+                            <button class="my-button">Folding</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="img/marin.jpg" alt="slide-3">
+                    <div class="slide-content">
+                        <h3>Bicycle</h3>
+                        <p>Hydraulic disc brakes provide smooth, controlled stopping in all
+                            conditions with minimal maintenance.</p>
+                        <a href="#">
+                            <button class="my-button">Marin Larkspur</button>
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="dots-container">
+            <div class="dots-numbers-container">
+                <span class="dots-numbers-container-index"></span>
+                <span class="dots-numbers-container-divider">/</span>
+                <span class="dots-numbers-container-count"></span>
+            </div>
+            <div class="swiper-pagination-dots"></div>
+        </div>
+    </div>
+
+
+    <div class="wrapper">
+        <section class="bicycle">
+            <p class="section-text"></p>
+            <h2 class="section-title"></h2>
+            <img src="" alt="" class="bicycle-img">
+            <button class="section-button"></button>
+        </section>
+        <section class="cards">
+            <p class="section-text"></p>
+            <h2 class="section-title"></h2>
+            <a href="" class="cards-link">
+                <div class="cards-block-img">
+                    <img src="" alt="" class="card-img">
+                </div>
+                <span class="card-date"></span>
+                <div class="card-info">
+                    <h3 class="card-title"></h3>
+                </div>
+            </a>
+            <a href="" class="cards-link">
+                <div class="cards-block-img">
+                    <img src="" alt="" class="card-img">
+                </div>
+                <span class="card-date"></span>
+                <div class="card-info">
+                    <h3 class="card-title"></h3>
+                </div>
+            </a>
+            <a href="" class="cards-link">
+                <div class="cards-block-img">
+                    <img src="" alt="" class="card-img">
+                </div>
+                <span class="card-date"></span>
+                <div class="card-info">
+                    <h3 class="card-title"></h3>
+                </div>
+            </a>
+
+        </section>
+        <section class="form">
+            <div class="form-block">
+                <form action="#" class="contact-form">
+                    <input type="text" placeholder="Your name">
+                    <input type="text" placeholder="E-mail">
+                    <input type="number" placeholder="Phone">
+                    <textarea name="contact-text" id="contact-text" cols="30" rows="10"></textarea>
+                    <button class="contact-button"></button>
+                </form>
+            </div>
+            <div class="form-block">
+                <!-- Map -->
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>© Copyright
+            <script>
+                document.write(new Date().getFullYear());
+            </script>
+        </p>
+    </footer>
+    <script src="js/my.js"></script>
+</body>
+
+</html>
