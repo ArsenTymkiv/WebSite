@@ -438,6 +438,7 @@ body {
     margin-right: auto;
     margin-left: auto;
     max-width: 1770px;
+    padding: 0 50px;
 }
 
 .tx-center {
@@ -551,3 +552,126 @@ p,
 ul {
     margin: 0;
 }
+
+
+/* CSS для мобільного меню */
+.mobile-menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #555555;
+    z-index: 9999;
+    opacity: 0;
+    transform: translate(100%, -100%);
+    transition: all 0.3s ease-in-out;
+}
+
+.mobile-menu-show {
+    opacity: 1;
+    transform: translate(0%, 0%);
+}
+
+.mobile-menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.mobile-menu-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-menu-list li {
+    text-align: center;
+    margin-bottom: 10px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.mobile-menu-show .mobile-menu-list li {
+    opacity: 1;
+    transform: translateY(0%);
+}
+
+.mobile-menu-list li:last-child {
+    margin-bottom: 0;
+}
+
+.mobile-menu-list li a,
+.social-network-mobile i {
+    color: white;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 1.25rem;
+    text-decoration: none;
+    padding: 1rem;
+}
+
+.mobile-menu-close-btn {
+    text-align: end;
+    padding: 25px;
+}
+
+.mobile-btn {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.social-network-mobile {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.social-link-mobile {
+    text-decoration: none;
+}
+
+.mobile-menu-btn{
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .menu,
+    .social-network {
+        display: none;
+    }
+
+    .mobile-menu-container,.mobile-menu-btn {
+        display: block;
+    }
+
+    .bicycle-img,
+    .box-image-1 {
+        display: none;
+    }
+}
+
+/* Додайте клас "sticky" для фіксованого хедера */
+#header.sticky {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: rgba(198, 198, 198, 0.7);
+    transition: top 0.3s ease-in-out;
+}
+
+/* Зберігайте властивість "transition" для хедера без класу "sticky" */
+#header {
+    position: sticky;
+    top: -200px;
+    transition: all 0.3s ease-in-out;
+    z-index: 999;
+}
+
+

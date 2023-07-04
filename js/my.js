@@ -71,3 +71,41 @@ window.addEventListener("resize", function(){
     slidesWidth = slides.firstElementChild.clientWidth;
     goToSlide(currentSlideIndex);
 });
+
+// Отримати елементи кнопки меню та мобільного меню
+const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+const mobileMenuContainer = document.querySelector('.mobile-menu-container');
+
+// Функція для відкриття/закриття мобільного меню
+function toggleMobileMenu() {
+    mobileMenuContainer.classList.toggle('mobile-menu-show');
+}
+
+// Додати обробник подій для кнопки меню
+mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+
+// Отримуємо посилання на кнопку закриття меню
+const closeBtn = document.querySelector('.mobile-menu-close-btn');
+
+// Додаємо обробник події для кліку на кнопку закриття
+closeBtn.addEventListener('click', toggleMobileMenu);
+
+
+
+
+// Отримайте елемент хедера
+const header = document.getElementById('header');
+
+// Функція для перевірки стану прокрутки та застосування класу "sticky"
+function toggleStickyHeader() {
+    if (window.pageYOffset > 600) {
+        header.classList.add('sticky');
+    } else {
+        header.classList.remove('sticky');
+    }
+}
+
+// Додайте обробник події прокрутки
+window.addEventListener('scroll', toggleStickyHeader);
+
+
